@@ -1,8 +1,8 @@
-function makeGrid() {
-  for (let i = 0; i < 16; i++) {
+function makeGrid(size) {
+  for (let i = 0; i < size; i++) {
     const row = document.createElement("div");
     row.classList.add("row");
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < size; i++) {
       const box = document.createElement("div");
       box.classList.add("box");
       box.addEventListener(
@@ -17,6 +17,6 @@ function makeGrid() {
 }
 
 // main method
-makeGrid();
+makeGrid(16);
 const button = document.querySelector("button");
-button.addEventListener("click", () => prompt("Enter a number 1-100"));
+button.addEventListener("click");
