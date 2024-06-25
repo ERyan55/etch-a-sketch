@@ -18,6 +18,10 @@ function makeGrid(size) {
 
 function setGridSize() {
   const size = prompt("Enter a number from 1 to 100");
+  if (size > 100 || size < 1) {
+    alert("Invalid number, the grid size must be from 1 to 100");
+    return;
+  }
   const originalContainer = document.querySelector(".container");
   document.body.removeChild(originalContainer);
   const newContainer = document.createElement("div");
@@ -29,4 +33,4 @@ function setGridSize() {
 // main method
 makeGrid(16);
 const button = document.querySelector("button");
-button.addEventListener("click");
+button.addEventListener("click", setGridSize);
