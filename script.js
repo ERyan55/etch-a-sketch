@@ -16,6 +16,16 @@ function makeGrid(size) {
   }
 }
 
+function setGridSize() {
+  const size = prompt("Enter a number from 1 to 100");
+  const originalContainer = document.querySelector(".container");
+  document.body.removeChild(originalContainer);
+  const newContainer = document.createElement("div");
+  newContainer.classList.add("container");
+  document.body.appendChild(newContainer);
+  makeGrid(size);
+}
+
 // main method
 makeGrid(16);
 const button = document.querySelector("button");
