@@ -18,3 +18,5 @@ function makeGrid() {
 
 // main method
 makeGrid();
+const button = document.querySelector("button");
+button.addEventListener("click", () => prompt("Enter a number 1-100"));
